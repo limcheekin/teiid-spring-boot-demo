@@ -16,7 +16,7 @@ public class Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		productRepository.findAll().forEach(c -> System.out.println(c));
+		System.out.println("productRepository.count() = " + productRepository.count());
 	}
 
 }

@@ -12,9 +12,14 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+    teiidSpringBootVersion = "1.2.0"
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.teiid:teiid-spring-boot-starter:1.2.0'
+	implementation "org.teiid:teiid-spring-boot-starter:$teiidSpringBootVersion"
+	implementation "org.teiid:spring-odata:$teiidSpringBootVersion"
 	runtimeOnly 'com.h2database:h2'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
